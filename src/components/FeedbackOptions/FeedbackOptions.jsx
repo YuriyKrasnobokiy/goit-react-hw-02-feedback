@@ -1,12 +1,12 @@
-export const FeedbackOptions = ({ options, leaveFeedback }) => {
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <>
       {options.map(option => (
         <button
           key={option}
           type="button"
-          name={option}
-          onClick={leaveFeedback}
+          onClick={() => onLeaveFeedback(option)}
+          style={{ textTransform: 'capitalize' }}
         >
           {option}
         </button>
